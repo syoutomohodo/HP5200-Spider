@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Addprinter{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>追加新打印机</h1>
+</div>
+<form method="post" action="{{ url_for('addprinter') }}">
+    物理名：<br>
+    <input type="text" name="physical"><br>
+    IP地址:<br>
+    <input type="text" name="ip"><br>
+    <input type="submit" value="START">
+</form>
+{% endblock %}
